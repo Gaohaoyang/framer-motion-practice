@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack serve",
     "build": "webpack --mode=production",
-    "cl": "rm -rf ./build"
+    "cl": "rm -rf ./build",
+    "deploy": "gh-pages -d build",
+    "pub": "yarn cl && yarn build && yarn deploy"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,10 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "eslint": "^7.18.0",
@@ -29,6 +35,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.5.1",
     "postcss": "^8.2.4",
     "postcss-loader": "^4.1.0",
@@ -38,5 +45,9 @@
     "webpack": "^5.15.0",
     "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
