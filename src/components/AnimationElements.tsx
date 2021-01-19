@@ -4,32 +4,39 @@ import assets from '../assets'
 
 import './AnimationElements.css'
 
+const getRandomTransformOrigin = () => {
+  const value = (20 + 50 * Math.random()) / 100
+  const value2 = (20 + 50 * Math.random()) / 100
+  return {
+    originX: value,
+    originY: value2,
+  }
+}
+
+const getRandomDelay = () => -(Math.random() * 0.7 + 0.05)
+
+const randomDuration = () => Math.random() * 0.07 + 0.23
+
 const variants = {
-  visible: (i) => ({
-    opacity: 1,
-    rotate: 10,
+  start: (i) => ({
+    rotate: i % 2 === 0 ? [-1, 1.3, 0] : [1, -1.4, 0],
     transition: {
-      delay: i * 0.3,
+      delay: getRandomDelay(),
+      repeat: Infinity,
+      duration: randomDuration(),
     },
   }),
-  hidden: { opacity: 0 },
+  reset: {
+    rotate: 0,
+  },
 }
 
 function AnimationElements() {
   const controls = useAnimation()
 
-  // useEffect(() => {
-  //   controls.start((i) => ({
-  //     opacity: 0,
-  //     x: 100,
-  //     transition: { delay: i * 0.3 },
-  //   }))
-  // }, [])
-
   return (
     <div>
       <motion.h2
-        // initial={false}
         initial={{
           y: -20,
         }}
@@ -44,12 +51,21 @@ function AnimationElements() {
       <button
         type="button"
         onClick={() => {
-          controls.start('visible')
+          controls.start('start')
         }}
       >
         start shaking
       </button>
-      <button type="button">stop shaking</button>
+      <span> </span>
+      <button
+        type="button"
+        onClick={() => {
+          controls.stop()
+          controls.set('reset')
+        }}
+      >
+        stop shaking
+      </button>
       <br />
       <br />
       <div className="nine-wrap">
@@ -57,13 +73,16 @@ function AnimationElements() {
           <motion.div
             className="nine-card"
             key={`${item.profile}`}
-            // animate={{ rotate: 10 }}
-            // style={{ backgroundImage: `url(${item.profile})` }}
-            // -- Dynamic variants --
-            custom={i}
-            // animate="visible"
-            variants={variants}
+            // style={{
+            //   transformOrigin: getRandomTransformOrigin(),
+            // }}
+            style={{
+              ...getRandomTransformOrigin(),
+              backgroundImage: `url(${item.profile})`,
+            }}
             // -- controls --
+            custom={i}
+            variants={variants}
             animate={controls}
           />
         ))}
