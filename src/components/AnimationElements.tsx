@@ -5,8 +5,8 @@ import assets from '../assets'
 import './AnimationElements.css'
 
 const getRandomTransformOrigin = () => {
-  const value = (20 + 50 * Math.random()) / 100
-  const value2 = (20 + 50 * Math.random()) / 100
+  const value = (16 + 40 * Math.random()) / 100
+  const value2 = (15 + 36 * Math.random()) / 100
   return {
     originX: value,
     originY: value2,
