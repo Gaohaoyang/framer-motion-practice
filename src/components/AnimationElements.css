@@ -1,0 +1,17 @@
+.nine-wrap {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.nine-card {
+  width: 220px;
+  height: 280px;
+  margin-bottom: 24px;
+  background-color: #ccc;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.4);
+}
