@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import assets from '../assets'
 
@@ -23,6 +23,7 @@ const variants = {
     transition: {
       delay: getRandomDelay(),
       repeat: Infinity,
+      repeatType: 'mirror',
       duration: randomDuration(),
     },
   }),
