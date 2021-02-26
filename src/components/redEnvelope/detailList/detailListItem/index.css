@@ -1,0 +1,49 @@
+.container {
+  width: 100vw;
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+
+}
+
+.profile {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  background-size: cover;
+  margin-left: 23px;
+}
+
+.nickWrap {
+  margin-left: 19px;
+  font-size: 28px;
+
+}
+
+.nick {
+  color: #666;
+}
+
+.inviteText {
+  font-size: 28px;
+  color: #999;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  color: #333;
+  margin-right: 24px;
+}
+
+
+.red {
+  color: #f35d4d;
+}

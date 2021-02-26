@@ -1,0 +1,28 @@
+.wrap {
+  position: relative;
+  width: 340px;
+  height: 480px;
+  margin-left: 90px;
+  margin-top: 90px;
+}
+
+.card {
+  width: 340px;
+  height: 480px;
+  border-radius: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+}
+
+.front {
+  z-index: 10;
+  background-image: url(https://gw.alicdn.com/tfs/TB1v1EygQ9l0K4jSZFKXXXFjpXa-564-792.png);
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-image: url(https://gw.alicdn.com/tfs/TB1KAShQhv1gK0jSZFFXXb0sXXa-341-480.png);
+}

@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import assets from '../assets'
+import assets from './assets'
 
-import './AnimationElements.css'
+import './index.css'
 
 const getRandomTransformOrigin = () => {
   const value = (16 + 40 * Math.random()) / 100
@@ -32,7 +32,7 @@ const variants = {
   },
 }
 
-function AnimationElements() {
+function index() {
   const controls = useAnimation()
 
   return (
@@ -42,9 +42,8 @@ function AnimationElements() {
           y: -20,
         }}
         animate={{
-          x: 50,
-          y: 10,
-          scale: 1.2,
+          x: 10,
+          y: 0,
         }}
       >
         AnimationElements
@@ -74,9 +73,6 @@ function AnimationElements() {
           <motion.div
             className="nine-card"
             key={`${item.profile}`}
-            // style={{
-            //   transformOrigin: getRandomTransformOrigin(),
-            // }}
             style={{
               ...getRandomTransformOrigin(),
               backgroundImage: `url(${item.profile})`,
@@ -92,4 +88,4 @@ function AnimationElements() {
   )
 }
 
-export default AnimationElements
+export default index

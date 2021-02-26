@@ -1,0 +1,59 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #666;
+}
+
+.redEnvelopeContainer {
+  width: 574px;
+  height: 745px;
+  background-image: url(https://gw.alicdn.com/imgextra/i4/O1CN01kXfCrt1J5Vc9Mhtmt_!!6000000000977-2-tps-574-745.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.godProfile {
+  margin-top: 57px;
+  width: 102px;
+  height: 102px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(https://gw.alicdn.com/imgextra/i3/O1CN01tjkKha1wJx7RoClIO_!!6000000006288-2-tps-204-204.png);
+}
+
+.text {
+  height: 48px;
+  font-size: 28px;
+  color: #ffeecb;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-top: 60px;
+  font-size: 42px;
+  color: #ffeecb;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.kaiCoin {
+  background-image: url(https://gw.alicdn.com/imgextra/i1/O1CN01PFaUcs1owPRrtrXz0_!!6000000005289-2-tps-164-166.png);
+  width: 164px;
+  height: 166px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 104px;
+}

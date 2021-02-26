@@ -1,0 +1,27 @@
+.container {
+  background-color: #000;
+  min-height: 100vh;
+  position: relative;
+}
+
+.title {
+  color: #ccc;
+}
+
+.fireworks {
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(https://gw.alicdn.com/imgextra/i2/O1CN01MDwVNE1TADqfXH4sI_!!6000000002341-2-tps-200-200.png);
+  position: absolute;
+}
+
+.f1{
+  left: 80px;
+  top: 200px;
+}
+.f2 {
+  right: 70px;
+  top: 160px;
+}

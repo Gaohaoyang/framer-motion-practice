@@ -1,0 +1,17 @@
+.wrap {
+  margin-top: 48px;
+  margin-left: 48px;
+}
+
+.title {
+  font-size: 40px;
+
+}
+
+.ball {
+  width: 88px;
+  height: 88px;
+  border-radius: 999px;
+  background-color: #999;
+  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+}
