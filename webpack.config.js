@@ -1,6 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const localIdentName = '[path]_[name]_[local]'
+
 module.exports = {
   entry: './src/index.tsx',
   output: {
@@ -21,6 +23,15 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
+            plugins: [
+              [
+                'react-css-modules',
+                {
+                  generateScopedName: localIdentName,
+                  attributeNames: { className: 'class' },
+                },
+              ],
+            ],
           },
         },
       },
@@ -28,7 +39,15 @@ module.exports = {
         test: /\.(css)$/,
         use: [
           'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: {
+                localIdentName,
+              },
+            },
+          },
           {
             loader: 'postcss-loader',
             options: {
