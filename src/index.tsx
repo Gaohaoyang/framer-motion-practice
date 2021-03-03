@@ -1,18 +1,10 @@
 import React, { useEffect } from 'react'
 import { render } from 'react-dom'
-import { HashRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import Stats from 'stats-js'
-import Home from './components/home'
-import ShakingCards from './components/shakingCards'
-import Fireworks from './components/fireworks'
-import RedEnvelope from './components/redEnvelope'
-import FadeInOut from './components/fadeInOut'
-import FlipCard from './components/flipCard'
-import DragBall from './components/dragBall'
-import Spring from './components/spring'
-import Orchestration from './components/orchestration'
+import App from './app'
 
-const App = () => {
+const Index = () => {
   useEffect(() => {
     const stats = new Stats()
     stats.showPanel(0) // 0: fps, 1: ms, 2: mb, 3+: custom
@@ -28,38 +20,10 @@ const App = () => {
   return (
     <>
       <Router>
-        <Switch>
-          <Route path="/Fireworks">
-            <Fireworks />
-          </Route>
-          <Route path="/ShakingCards">
-            <ShakingCards />
-          </Route>
-          <Route path="/RedEnvelope">
-            <RedEnvelope />
-          </Route>
-          <Route path="/FadeInOut">
-            <FadeInOut />
-          </Route>
-          <Route path="/FlipCard">
-            <FlipCard />
-          </Route>
-          <Route path="/DragBall">
-            <DragBall />
-          </Route>
-          <Route path="/Spring">
-            <Spring />
-          </Route>
-          <Route path="/Orchestration">
-            <Orchestration />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <App />
       </Router>
     </>
   )
 }
 
-render(<App />, document.getElementById('root'))
+render(<Index />, document.getElementById('root'))
