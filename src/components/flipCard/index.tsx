@@ -6,8 +6,8 @@ import { motion, useAnimation } from 'framer-motion'
 import './index.css'
 
 const commonVariants = {
-  z: 8000,
-  perspective: 1000,
+  z: 0,
+  transformPerspective: 1000,
   transition: { type: 'spring', stiffness: 200, damping: 16 },
 }
 
