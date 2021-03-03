@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "module": "esNext",
+    "target": "es2015",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "alwaysStrict": true,
+    "sourceMap": false,
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "resolveJsonModule": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "baseUrl": "."
+  },
+  "include": ["./src/index.tsx"],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es",
+    "dist",
+    "typings",
+    "**/__test__",
+    "**/__coverage__",
+    "test",
+    "src/callApp"
+  ]
+}

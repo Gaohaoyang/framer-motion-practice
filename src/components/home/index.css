@@ -23,3 +23,8 @@ ul {
 li {
   line-height: 1.8;
 }
+
+button {
+  padding: 12px 24px;
+  margin: 12px;
+}

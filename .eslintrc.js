@@ -26,7 +26,6 @@ module.exports = {
     'no-console': 'off',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
-    // 'import/extensions': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',

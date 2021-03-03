@@ -4,27 +4,33 @@ import { motion } from 'framer-motion'
 
 import './index.css'
 
-const contentListData = ['Spring', 'FadeInOut', 'ShakingCards', 'Fireworks', 'RedEnvelope', 'FlipCard', 'DragBall']
+const contentListData = [
+  'Spring',
+  'FadeInOut',
+  'Orchestration',
+  'ShakingCards',
+  'Fireworks',
+  'RedEnvelope',
+  'FlipCard',
+  'DragBall',
+]
 
 const list = {
   visible: {
     opacity: 1,
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.3,
+      staggerChildren: 0.1,
     },
   },
   hidden: { opacity: 0 },
 }
 
 const itemVariants = {
-  visible: (i) => ({
+  visible: {
     opacity: 1,
     x: 0,
-    transition: {
-      delay: i * 0.1,
-    },
-  }),
+  },
   hidden: { opacity: 0, x: 100 },
 }
 
@@ -43,8 +49,8 @@ function intro() {
         hello framer-motion
       </motion.h1>
       <motion.ul initial="hidden" animate="visible" variants={list}>
-        {contentListData.map((item, i) => (
-          <motion.li variants={itemVariants} custom={i}>
+        {contentListData.map((item) => (
+          <motion.li key={item} variants={itemVariants}>
             <Link to={`/${item}`}>{item}</Link>
           </motion.li>
         ))}
