@@ -7,9 +7,9 @@ function index() {
   return (
     <>
       <FloatAttachContainer>
-        <button className="btn" type="button">
+        <div className="btn">
           drag
-        </button>
+        </div>
       </FloatAttachContainer>
       <FloatAttachContainer
         initBoundary="right"

@@ -2,14 +2,11 @@
   width: 100px;
   height: 100px;
   border-radius: 24px;
-  border: none;
   background-color: #ddd;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  outline: none;
 }
 
 .btn2{
