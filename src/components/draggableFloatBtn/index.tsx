@@ -6,11 +6,6 @@ import './index.css'
 function index() {
   return (
     <>
-      <FloatAttachContainer>
-        <div className="btn">
-          drag
-        </div>
-      </FloatAttachContainer>
       <FloatAttachContainer
         initBoundary="right"
         style={{
@@ -18,6 +13,11 @@ function index() {
         }}
       >
         <div className="btn2">hello</div>
+      </FloatAttachContainer>
+      <FloatAttachContainer>
+        <div className="btn">
+          drag
+        </div>
       </FloatAttachContainer>
       <div className="box">box</div>
       <div className="box">box</div>

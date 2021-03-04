@@ -25,8 +25,6 @@ function floatAttachContainer(props: propsType) {
   const [ref, { width, height, y }] = useDimensions({ liveMeasure: false })
   const controls = useAnimation()
 
-  console.log(width, height, y)
-
   const commonVariants = {
     transition: {
       delay,
@@ -60,12 +58,12 @@ function floatAttachContainer(props: propsType) {
       left: 0,
       right: window.screen.width - width,
       top: -y,
-      bottom: window.screen.availHeight - y - height,
+      bottom: document.documentElement.clientHeight - y - height,
     } : {
       left: -(window.screen.width - width),
       right: 0,
       top: -y,
-      bottom: window.screen.availHeight - y - height,
+      bottom: document.documentElement.clientHeight - y - height,
     }
 
   return (
