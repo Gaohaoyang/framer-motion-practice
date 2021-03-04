@@ -11,6 +11,7 @@ import FlipCard from './components/flipCard'
 import DragBall from './components/dragBall'
 import Spring from './components/spring'
 import Orchestration from './components/orchestration'
+import DraggableFloatBtn from './components/draggableFloatBtn'
 
 function App() {
   const location = useLocation()
@@ -42,6 +43,9 @@ function App() {
         </Route>
         <Route path="/Orchestration">
           <Orchestration />
+        </Route>
+        <Route path="/DraggableFloatBtn">
+          <DraggableFloatBtn />
         </Route>
         <Route path="/">
           <Home />

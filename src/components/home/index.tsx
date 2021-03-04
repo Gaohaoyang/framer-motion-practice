@@ -13,6 +13,7 @@ const contentListData = [
   'RedEnvelope',
   'FlipCard',
   'DragBall',
+  'DraggableFloatBtn',
 ]
 
 const list = {
