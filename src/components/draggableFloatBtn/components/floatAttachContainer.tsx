@@ -60,12 +60,12 @@ function floatAttachContainer(props: propsType) {
       left: 0,
       right: window.screen.width - width,
       top: -y,
-      bottom: window.screen.height - y - height,
+      bottom: window.screen.availHeight - y - height,
     } : {
       left: -(window.screen.width - width),
       right: 0,
       top: -y,
-      bottom: window.screen.height - y - height,
+      bottom: window.screen.availHeight - y - height,
     }
 
   return (
